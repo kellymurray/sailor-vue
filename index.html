@@ -1,0 +1,60 @@
+<!-- index.html -->
+
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Vue</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div id="app">
+    <div id="choose">Choose your Sailor Senshi.</div>
+          <!-- use v-link directive for navigation. -->
+  <nav><p>
+      <a v-link="{ path: '/usagi' }">Usagi</a>
+      <a v-link="{ path: '/ami' }">Ami</a>
+      <a v-link="{ path: '/rei' }">Rei</a>
+      <a v-link="{ path: '/makoto' }">Makoto</a>
+      <a v-link="{ path: '/minako' }">Minako</a>
+    </p></nav>
+
+    <!-- use router-view element as route outlet -->
+    <router-view></router-view>
+  </div>
+
+  <template id="usagi">
+    <h2>You chose Usagi.</h2>
+    <div id="editor">
+  <textarea v-model="input" debounce="300"></textarea>
+</div>
+
+
+  </template>
+
+  <template id="ami">
+    <h2>Hello Ami!</h2>
+  </template>
+
+  <template id="rei">
+    <h2>Hello Rei!</h2>
+  </template>
+
+  <template id="makoto">
+    <h2>Hello Makoto!</h2>
+  </template>
+
+  <template id="minako">
+    <h2>Hello Minako!</h2>
+  </template>
+
+  <!-- JS -->
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/vue/dist/vue.js"></script>
+  <script src="bower_components/vue-router/dist/vue-router.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
