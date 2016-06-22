@@ -211,6 +211,14 @@ button {
 	box-shadow:0 1px 1px #ccc;
 }
 
+.sm-info {
+	display: none;
+}
+
+.show {
+	display: block;
+}
+
 .hide {
 	display: none;
 }

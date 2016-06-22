@@ -1,5 +1,6 @@
 
 
+
 // Define components
 var Usagi = Vue.extend({
     template: '#usagi'
@@ -70,7 +71,6 @@ router.start(App, '#app')
 //
 
 
-
 $(function() {
   $('#smm').click(function() {
     if($(this).is(':checked'))
@@ -91,12 +91,25 @@ $(function() {
 
 
 $(function() {
-  $('#sm-attacks').on('click', function(){
+  $('.sm-attacks').on('click', function(){
   console.log("submitted");
-  $('.hide').show();
+  $('.sm-info').addClass('show');
 });
 });
 
+$(function() {
+  $('.sm-no').on('click', function(){
+  console.log("submitted no");
+  $('#block').fadeOut('slow');
+});
+});
+
+$(function() {
+  $('.sm-no').on('click', function(){
+  console.log("submitted no");
+  $('#ssm-block').fadeOut('slow');
+});
+});
 
 // $(document).ready(function(){
 //   $('#smm').change(function(){
