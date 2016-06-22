@@ -4,7 +4,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Vue</title>
+  <title>She is the one called Sailor Vue</title>
 
   <!-- CSS -->
   <link rel="stylesheet" href="styles.css">
@@ -29,17 +29,20 @@
     <div class="sailor-box"><h2>You chose Usagi.</h2>
     <p class="sailor-choice">Which Sailor Moon are you playing?</p>
       <div class="checked-container">
-        <input type="radio" id="one" class="sm" value="Sailor Moon" v-model="picked">
+        <input type="radio" id="smm" value="Sailor Moon" v-model="picked">
         <label for="one" class="sm">Sailor Moon</label>
         <br>
-        <input type="radio" id="two" class="sm" value="Super Sailor Moon" v-model="picked">
+        <input type="radio" id="ssm" value="Super Sailor Moon" v-model="picked">
         <label for="two" class="sm">Super Sailor Moon</label>
         <br>
-        <input type="radio" id="three" value="Eternal Sailor Moon" v-model="picked">
+        <input type="radio" id="esm" value="Eternal Sailor Moon" v-model="picked">
         <label for="three" class="sm">Eternal Sailor Moon</label>
         <br>
-        <span class="picked">Picked: {{ picked }}</span>
+        <span class="picked">You Picked: {{ picked }}</span>
       </div>
+      <div id="block"><img class="sm-img" src="http://ib3.huluim.com/video/60386594?region=US&size=600x400"></div>
+      <div id="ssm-block">SSM</div>
+      <div id="esm-block">ESM</div>
     </div>
   </template>
 

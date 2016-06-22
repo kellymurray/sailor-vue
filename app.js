@@ -63,3 +63,15 @@ router.map({
 // The router will create an instance of App and mount to
 // the element matching the selector #app.
 router.start(App, '#app')
+
+$('#smm').click(function(){
+    this.checked?$('#block').show(500):$('#block').hide(500);
+});
+
+$('#ssm').click(function(){
+    this.checked?$('#ssm-block').show(500):$('#ssm-block').hide(500);
+});
+
+$('#esm').click(function(){
+    this.checked?$('#esm-block').show(500):$('#esm-block').hide(500);
+});

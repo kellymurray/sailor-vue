@@ -179,3 +179,28 @@ input, label {
 	vertical-align: text-bottom;
 	float: left;
 }
+
+#block {
+	display:none;
+	padding:10px;
+	text-align:center;
+}
+
+#ssm-block {
+	display:none;
+	background:#eef;
+	padding:10px;
+	text-align:center;
+}
+
+#esm-block {
+	display:none;
+	background:#eef;
+	padding:10px;
+	text-align:center;
+}
+
+.sm-img {
+	width: 200px;
+	height: 150px;
+}
