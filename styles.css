@@ -94,7 +94,7 @@ nav a:last-child{
 
 nav{
 	display:inline-block;
-	margin:10px auto 45px;
+	margin:10px auto 35px;
 	background-color:#137CD8;
 	box-shadow:0 1px 1px #ccc;
 	border-radius:2px;
@@ -188,14 +188,12 @@ input, label {
 
 #ssm-block {
 	display:none;
-	background:#eef;
 	padding:10px;
 	text-align:center;
 }
 
 #esm-block {
 	display:none;
-	background:#eef;
 	padding:10px;
 	text-align:center;
 }
@@ -203,4 +201,16 @@ input, label {
 .sm-img {
 	width: 200px;
 	height: 150px;
+}
+
+button {
+	background-color:#F8599C;
+	color: white;
+	border: none;
+	padding: 5px;
+	box-shadow:0 1px 1px #ccc;
+}
+
+.hide {
+	display: none;
 }

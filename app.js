@@ -1,6 +1,6 @@
 
 
-// Define some components
+// Define components
 var Usagi = Vue.extend({
     template: '#usagi'
 })
@@ -29,15 +29,12 @@ var Minako = Vue.extend({
 var App = Vue.extend({})
 
 // Create a router instance.
-// You can pass in additional options here, but let's
-// keep it simple for now.
+
 var router = new VueRouter()
 
 // Define some routes.
-// Each route should map to a component. The "component" can
-// either be an actual component constructor created via
-// Vue.extend(), or just a component options object.
-// We'll talk about nested routes later.
+// Each route should map to a component.
+
 router.map({
     '/usagi': {
         component: Usagi
@@ -64,14 +61,69 @@ router.map({
 // the element matching the selector #app.
 router.start(App, '#app')
 
-$('#smm').click(function(){
-    this.checked?$('#block').show(500):$('#block').hide(500);
+// new Vue({
+//   el: '.picked',
+//   data: {
+//     picked: null
+//   }
+// });
+//
+
+
+
+$(function() {
+  $('#smm').click(function() {
+    if($(this).is(':checked'))
+     $('#block').fadeIn('slow');
 });
 
-$('#ssm').click(function(){
-    this.checked?$('#ssm-block').show(500):$('#ssm-block').hide(500);
+  $('#ssm').click(function() {
+    if($(this).is(':checked'))
+    $('#ssm-block').fadeIn('slow');
+  });
+
+  $('#esm').click(function() {
+    if($(this).is(':checked'))
+    $('#esm-block').fadeIn('slow');
+  });
+
 });
 
-$('#esm').click(function(){
-    this.checked?$('#esm-block').show(500):$('#esm-block').hide(500);
+
+$(function() {
+  $('#sm-attacks').on('click', function(){
+  console.log("submitted");
+  $('.hide').show();
 });
+});
+
+
+// $(document).ready(function(){
+//   $('#smm').change(function(){
+//     if(this.checked)
+//       $('#block').fadeIn('slow');
+//     else(this.blur)
+//       $('#block').fadeOut('slow');
+//
+// });
+// });
+//
+// $(document).ready(function(){
+//   $('#ssm').change(function(){
+//     if(this.checked)
+//       $('#ssm-block').fadeIn('slow');
+//     else
+//       $('#ssm-block').fadeOut('slow');
+//
+// });
+// });
+//
+// $(document).ready(function(){
+//   $('#esm').change(function(){
+//     if(this.checked)
+//       $('#esm-block').fadeIn('slow');
+//     else
+//       $('#esm-block').fadeOut('slow');
+//
+// });
+// });
