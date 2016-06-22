@@ -12,6 +12,7 @@
 <body>
 
   <div id="app">
+    <div id="nav-wrapper">
     <div id="choose">Choose your Sailor Senshi.</div>
           <!-- use v-link directive for navigation. -->
   <nav><p>
@@ -21,13 +22,25 @@
       <a v-link="{ path: '/makoto' }">Makoto</a>
       <a v-link="{ path: '/minako' }">Minako</a>
     </p></nav>
-
+</div>
     <!-- use router-view element as route outlet -->
     <router-view></router-view>
-  </div>
-
   <template id="usagi">
-    <h2>You chose Usagi.</h2>
+    <div class="sailor-box"><h2>You chose Usagi.</h2>
+    <p class="sailor-choice">Which Sailor Moon are you playing?</p>
+      <div class="checked-container">
+        <input type="radio" id="one" class="sm" value="Sailor Moon" v-model="picked">
+        <label for="one" class="sm">Sailor Moon</label>
+        <br>
+        <input type="radio" id="two" class="sm" value="Super Sailor Moon" v-model="picked">
+        <label for="two" class="sm">Super Sailor Moon</label>
+        <br>
+        <input type="radio" id="three" value="Eternal Sailor Moon" v-model="picked">
+        <label for="three" class="sm">Eternal Sailor Moon</label>
+        <br>
+        <span class="picked">Picked: {{ picked }}</span>
+      </div>
+    </div>
   </template>
 
   <template id="ami">
@@ -48,7 +61,7 @@
 
   <!-- JS -->
   <script src="bower_components/jquery/dist/jquery.js"></script>
-  <script src="vue.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.25/vue.js"></script>
   <script src="bower_components/vue-router/dist/vue-router.js"></script>
   <script src="app.js"></script>
 </body>
